@@ -1,0 +1,35 @@
+/*background image for webpage*/
+body {
+  background-image: url(images/product/blue.jpg);
+  background-size: cover;
+}
+
+/*styling for div*/
+.editor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px 280px 48px 280px;
+  background-color: antiquewhite;
+  border: 5px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 5.2);
+}
+
+/*styling for heading 1 tags*/
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+/*styling for heading 3 tags*/
+h3 {
+  font-size: 30px;
+  font-family: "M PLUS 1p", sans-serif;
+}
+
+/*styling for list item tags*/
+li {
+  font-size: 20px;
+  font-family: "M PLUS 1p", sans-serif;
+}

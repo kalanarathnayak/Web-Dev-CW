@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+    <link rel="manifest" href="images/site.webmanifest" />
+    <link rel="stylesheet" href="nav-styles.css" />
+    <link rel="stylesheet" href="common-styles.css" />
+    <link rel="stylesheet" href="main-styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <title>Home</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <!-- LOGO -->
+        <a href="main.html"><img class="logo" src="images/logos/logo.jpg" alt="logo" /></a>
+        <!-- NAVIGATION MENU -->
+        <!-- USING A CHECKBOX TO ACT AS THE RESPONSIVE TOGGLE -->
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <!-- NAVIGATION MENU ITEMS -->
+        <ul class="menu">
+            <li><a href="main.html">Home</a></li>
+            <li><a href="gallery.html">Art Gallery</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+    </nav>
+    <!--Container for all the slides-->
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="images/slideshow-img/image1.png" style="width: 100%" alt="The Creation of Adam" />
+        </div>
+        <div class="mySlides fade">
+            <img src="images/slideshow-img/image2.png" style="width: 100%" alt="The Coronation of Napoleon" />
+        </div>
+        <div class="mySlides fade">
+            <img src="images/slideshow-img/image3.png" style="width: 100%" alt="Embarkation of the Pilgrims" />
+        </div>
+        <!--Text box in middle of slideshow-->
+        <div class="welcome-text">
+            <p id="welcome">Home of Fine Art</p>
+        </div>
+        <!--Arrow buttons on side of slideshow for next/previous control-->
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    <br />
+    <!--Three dots on bottom of slideshow to indicate current slide-->
+    <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <div class="body">
+        <!--"Stories" section-->
+        <h1 id="h1">Stories</h1>
+        <!--main container for content of stories-->
+        <div class="row">
+            <!--first column container holds first story (the image, story title, source)-->
+            <div class="column">
+                <div class="placeholder-img-container">
+                    <img src="images/news-img/article_pic1.jpg" alt="newsArticle1" class="placeholder-img">
+                </div>
+                <!--link to the original article-->
+                <!--target attribute opens link in a new tab-->
+                <a href="https://www.bbc.com/news/uk-england-tees-62074976" target="_blank">
+                    <div class="info-container">
+                        <p>Dali masterpiece on show in Bishop Auckland Spanish Gallery</p>
+                    </div>
+                </a>
+                <div class="source">
+                    <p class="p-source">(Source: BBC News)</p>
+                </div>
+            </div>
+            <!--second story-->
+            <div class="column">
+                <div class="placeholder-img-container">
+                    <img src="images/news-img/article_pic2.jpg" alt="newsArticle2" class="placeholder-img">
+                </div>
+                <!--link to the original article-->
+                <!--target attribute opens link in a new tab-->
+                <a href="https://cnn.it/3zr9X1D" target="_blank">
+                    <div class="info-container">
+                        <p>An artist claims Maurizio Cattelan copied his banana artwork. Now the case could be headed to
+                            court</p>
+                    </div>
+                </a>
+                <div class="source">
+                    <p class="p-source">(Source: CNN Style)</p>
+                </div>
+            </div>
+            <!--third story-->
+            <div class="column">
+                <div class="placeholder-img-container">
+                    <img src="images/news-img/article_pic3.jpg" alt="newsArticle3" class="placeholder-img">
+                </div>
+                <!--link to the original article using anchor element-->
+                <!--target attribute opens link in a new tab-->
+                <a href="https://www.artbasel.com/stories/art-collectors-guide-to-the-blockchain" target="_blank">
+                    <div class="info-container">
+                        <p>A collector's guide to the blockchain. How multiple uses of NFTs are supporting the art
+                            market.
+                        </p>
+                    </div>
+                </a>
+                <div class="source">
+                    <p class="p-source">(Source: Art Basel)</p>
+                </div>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <!--anchor element to stay at the stories section-->
+        <a href="#h1">
+            <p><u>View more</u></p>
+        </a>
+        <div class="separator"></div>
+        <hr>
+        <!--Displaying Featured Events-->
+        <h1 id="fevents">Featured Events</h1>
+        <!---row containing three columns-->
+        <div class="row">
+            <!---first column containing the images, description, date and source of the first event -->
+            <div class="column">
+                <div class="placeholder-img-container">
+                    <img src="images/event-img/event_pic1.jpg" alt="featuredEvents1" class="placeholder-img">
+                </div>
+                <a href="#fevents">
+                    <div class="info-container">
+                        <p class="event-title">(Re)Discover the Colibri Art Gallery</p>
+                        <p class="p-date">Date: July 25th</p>
+                    </div>
+                </a>
+                <div class="source">
+                    <p class="p-source">(Guided Tour)</p>
+                </div>
+            </div>
+            <!---second column containing the images, description, date and source of the second event -->
+            <div class="column">
+                <div class="placeholder-img-container">
+                    <img src="images/event-img/event_pic2.jpg" alt="featuredEvents2" class="placeholder-img">
+                </div>
+                <a href="#fevents">
+                    <div class="info-container">
+                        <p class="event-title">Italian Renaissance Collection</p>
+                        <p class="p-date">Date: July 29th</p>
+                    </div>
+                </a>
+                <div class="source">
+                    <p class="p-source">(Lecture)</p>
+                </div>
+            </div>
+            <!---third column containing the images, description, date and source of the third event -->
+            <div class="column">
+                <div class="placeholder-img-container">
+                    <img src="images/event-img/event_pic3.jpg" alt="featuredEvents3" class="placeholder-img">
+                </div>
+                <a href="#fevents">
+                    <div class="info-container">
+                        <p class="event-title">Screening of Loving Vincent</p>
+                        <p class="p-date">Date: July 31st</p>
+                    </div>
+                </a>
+                <div class="source">
+                    <p class="p-source">(Film Program)</p>
+                </div>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <!---directing to extra content page which is the Calender of Events Page-->
+        <a href="event.html">
+            <p><u>View more</u></p>
+        </a>
+        <div class="separator"></div>
+        <div class="separator"></div>
+    </div>
+    <!--creating a two column row with div tags-->
+    <div class="row">
+        <div class="column">
+            <div class="art-gallery">
+                <h1>Colibri Art Gallery</h1>
+                <p>we are people of the art.</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="art-placeholder-img-container">
+                <img src="images/promo-img/gallery.jpg" alt="Gallery" class="art-placeholder-img">
+            </div>
+        </div>
+    </div>
+    <!--creating a two column row with div tags-->
+    <div class="row">
+        <div class="column">
+            <div class="art-placeholder-img-container">
+                <img src="images/promo-img/visit-us.jpg" alt="Visit Us" class="art-placeholder-img">
+            </div>
+        </div>
+        <div class="column">
+            <div class="art-gallery">
+                <h1>Visit Us</h1>
+                <div class="address">
+                    <p>
+                        No. 10, Trelawney Place,<br> Colombo 04,<br> Sri Lanka
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--start of the footer section-->
+    <!--creating a two column row with div tags-->
+    <div class="end-row">
+        <!--1st column containing the logo, address and links to socials-->
+        <div class="column">
+            <div class="end-logo">
+                <img src="images/logos/end-logo.png" alt="Colibri logo">
+            </div>
+            <div class="end-address">
+                <!--a link to redirect to google map location when clicked on the address-->
+                <!--overriding the common css with inline css because the background of this section is black-->
+                <a href="https://goo.gl/maps/KMjPHMzVzwzS84rk6" target="_blank" style="color: white;">
+                    <br> No. 10, Trelawney Place, Colombo 04<br> Monday - Friday, 9am - 6pm
+                </a>
+                <br>
+                <br>
+                <!--link to the sitemap-->
+                <a href="site-map.html" style="color: white;"><u>Site Map</u></a><br>
+                <br>
+                <!--div containing the social media icons-->
+                <div>
+                    <!--linking social media icons with the urls of site socials-->
+                    <!--used target="_blank" attribute to open the link in a new browser tab-->
+                    <!--setting the icon size, color and padding with inline css-->
+                    <a href="https://www.facebook.com/iitsl" target="_blank"><i class='bx bxl-meta'
+                            style='font-size: 20px; color: white; padding-right: 7px;'></i></a>
+                    <a href="https://www.instagram.com/iitlife/?hl=en" target="_blank"><i class='bx bxl-instagram-alt'
+                            style='font-size: 20px; color: white; padding-right: 7px;'></i></a>
+                    <a href="-"><i class='bx bxl-twitter'
+                            style='font-size: 20px; color: white; padding-right: 7px;'></i></a>
+                    <a href="-"><i class='bx bxl-pinterest'
+                            style='font-size: 20px; color: white; padding-right: 7px;'></i></a>
+                </div>
+            </div>
+        </div>
+        <!--2nd column containing the email subscription form-->
+        <div class="end-column">
+            <div>
+                <p>Welcome to Colibri Art Gallery</p>
+                <!--overriding the common css with inline css for the p tag font sizing for convenience-->
+                <p style="font-size: 20px;">Sign up for updates on the latest in the art world</p>
+            </div>
+            <div>
+                <!--form to get the user email for subscription-->
+                <form id="form" name="subscribe">
+                    <div class="getmail">
+                        <input id="email-sub" type="email" name="email-sub" placeholder="Email" />
+                        <button id="sub" type="button">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+            <p style="font-size: 11px;">We will process the personal data you have supplied in accordance with janet
+                regulations.</p>
+        </div>
+    </div>
+    <footer>
+        <!-- Copyrights -->
+        <div class="footer-row">
+            <div class="footer-left-column">
+                <p>© 2022 Colibri Art Gallery All rights reserved.</p>
+            </div>
+            <!--page dev information-->
+            <div class="footer-right-column">
+                <!--link to student details page-->
+                <!--also this link is using inline css to override common css because the background of this section is black-->
+                <a href="aboutus.html" style="color: white;">Page by Group C1</a>
+            </div>
+        </div>
+    </footer>
+    <!-- End -->
+    <script src="main-script.js"></script>
+</body>
+
+</html>

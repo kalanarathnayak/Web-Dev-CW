@@ -1,0 +1,30 @@
+/*styling for the body tag*/
+body{
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+/*styling for the headings*/
+.headings{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/*styling for the class section*/
+.section{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/*styling for the class parts */
+.parts{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-right: 50px;
+
+}
+/*styling for the picture of myself*/
+#pictureOfMyself{
+    width:290px ;
+    height:420px;
+}

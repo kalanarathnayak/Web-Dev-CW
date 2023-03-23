@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+    <link rel="manifest" href="images/site.webmanifest" />
+    <link rel="stylesheet" href="nav-styles.css" />
+    <link rel="stylesheet" href="quiz.css" />
+    <link rel="stylesheet" href="common-styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <title>Quiz</title>
+</head>
+
+<body>
+    <a id="top"></a> <!-- anchor back to top-->
+    <nav class="navbar">
+        <!-- LOGO -->
+        <a href="main.html"><img class="logo" src="images/logos/logo.jpg" alt="logo" /></a>
+        <!-- NAVIGATION MENU -->
+        <!-- USING A CHECKBOX TO ACT AS THE RESPONSIVE TOGGLE -->
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <!-- NAVIGATION MENU ITEMS -->
+        <ul class="menu">
+            <li><a href="main.html">Home</a></li>
+            <li><a href="gallery.html">Art Gallery</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+    </nav>
+    <div class="separator" id="separator"></div>
+    <div class="body" id="bodyid">
+        <div id="welcome">
+            <h1> W E L C O M E </h1>
+            <hr>
+            <p><strong>Are You READY?</strong></p>
+            <p>Test your knowledge on Art, modern and historic with this quiz.<br>
+                This Quiz contains 10 questions. Each question worth 2 points for a total of 20 points.<br>
+                However, each incorrect answer or unanswered question will cost you 1 point.<br>
+                You will be given a time limit of 1 minute to complete this quiz. So think fast and answer correctly!
+            </p>
+            <p><strong>Click on START to start the Quiz</strong> </p>
+            <p><strong>GOOD LUCK!</strong></p>
+            <br>
+            <button onclick=begin();countdown();backtotop()>START</button>
+        </div>
+
+
+        <!--Start of Form that includes all questions with answer options-->
+        <form class="form1" name="question" id="questionForm">
+
+            <!--Instructions-->
+            <p><em>+2 points for correct answers</em></p>
+            <p><em>-1 point for incorrect/unanswered answers</em></p>
+            <p><em>Time Limit - 1 minute </em></p>
+            <br>
+            <!--Span tag to display timer countdown-->
+            <span id="timer"></span>
+            <br>
+            <div>
+                <p class="q"><strong>Q1 : Which artist cut off his own ear?</strong></p>
+                <label>
+                    <input type="radio" name="one" value="correct">Vincent van Gogh</label><br>
+                <!--br tag to display radio button answers vertically-->
+                <label>
+                    <input type="radio" name="one" value="incorrect">Pablo Picasso</label><br>
+                <label>
+                    <input type="radio" name="one" value="incorrect">Claude Monet</label><br>
+                <label>
+                    <input type="radio" name="one" value="incorrect">Michelangelo</label><br>
+            </div>
+            <div>
+                <p class="q"><strong>Q2: Who painted the Sistine Chapel?</strong></p>
+                <label>
+                    <input type="radio" name="two" value="incorrect">Donatello</label><br>
+                <label>
+                    <input type="radio" name="two" value="correct">Michelangelo</label><br>
+                <label>
+                    <input type="radio" name="two" value="incorrect">Raphael</label><br>
+                <label>
+                    <input type="radio" name="two" value="incorrect">Leonardo da Vinci</label><br>
+            </div>
+            <div>
+                <p class="q"><strong>Q3: Who painted "The Starry Night"?</strong></p>
+                <label>
+                    <input type="radio" name="three" value="incorrect">Paul Gauguin</label><br>
+                <label>
+                    <input type="radio" name="three" value="correct">Vincent van Gogh</label><br>
+                <label>
+                    <input type="radio" name="three" value="incorrect">Georges Seurat</label><br>
+                <label>
+                    <input type="radio" name="three" value="incorrect">Pierre-Auguste Renoir</label><br>
+            </div>
+            <div>
+                <p class="q"><strong>Q4: Which artist is known as the creator of Cubism?</strong></p>
+                <label>
+                    <input type="radio" name="four" value="incorrect">Claude Monet</label><br>
+                <label>
+                    <input type="radio" name="four" value="incorrect">Salvador Dali</label> <br>
+                <label>
+                    <input type="radio" name="four" value="correct">Pablo Picasso</label><br>
+                <label>
+                    <input type="radio" name="four" value="incorrect">Rembrandt</label><br>
+            </div>
+            <div>
+                <p class="q"><strong>Q5: Which of these is a paint made from pigments and plastic?</strong></p>
+                <label>
+                    <input type="radio" name="five" value="incorrect">Acetone</label><br>
+                <label>
+                    <input type="radio" name="five" value="incorrect">Tempera</label><br>
+                <label>
+                    <input type="radio" name="five" value="correct">Acrylic</label><br>
+                <label>
+                    <input type="radio" name="five" value="incorrect">Gesso</label><br>
+            </div>
+            <div>
+                <p class="q"><strong>Q6: Early photographers made their images on which of these materials?</strong></p>
+                <label>
+                    <input type="radio" name="six" value="incorrect">Paper</label><br>
+                <label>
+                    <input type="radio" name="six" value="incorrect">Stone</label><br>
+                <label>
+                    <input type="radio" name="six" value="incorrect">Plastic</label><br>
+                <label>
+                    <input type="radio" name="six" value="correct">Glass</label><br>
+            </div>
+            <div>
+                <p class="q"><strong>Q7: To which artistic movement does Paul Gauguin’s The Yellow Christ
+                        belong?</strong></p>
+                <label>
+                    <input type="radio" name="seven" value="incorrect">Bauhaus</label><br>
+                <label>
+                    <input type="radio" name="seven" value="incorrect">Fauvism</label><br>
+                <label>
+                    <input type="radio" name="seven" value="incorrect">Impressionism</label><br>
+                <label>
+                    <input type="radio" name="seven" value="correct">Cloisonnism</label><br>
+            </div>
+            <div>
+                <p class="q"><strong>Q8: What did I.M. Pei design outside the Louvre, in Paris?</strong></p>
+                <label>
+                    <input type="radio" name="eight" value="incorrect">Ziggurat</label><br>
+                <label>
+                    <input type="radio" name="eight" value="correct">Pyramid</label><br>
+                <label>
+                    <input type="radio" name="eight" value="incorrect">Sacrophagus</label><br>
+                <label>
+                    <input type="radio" name="eight" value="incorrect">Obelisk</label><br>
+            </div>
+            <div>
+                <p class="q"><strong>Q9: What animal often symbolizes peace in art?</strong></p>
+                <label>
+                    <input type="radio" name="nine" value="incorrect">Dog</label><br>
+                <label>
+                    <input type="radio" name="nine" value="correct">Dove</label><br>
+                <label>
+                    <input type="radio" name="nine" value="incorrect">Deer</label><br>
+                <label>
+                    <input type="radio" name="nine" value="incorrect">Duck</label><br>
+            </div>
+            <div>
+                <p class="q"><strong>Q10: What was the subject of the earliest known paintings?</strong></p>
+                <label>
+                    <input type="radio" name="ten" value="correct">Animals</label><br>
+                <label>
+                    <input type="radio" name="ten" value="incorrect">Flowers</label><br>
+                <label>
+                    <input type="radio" name="ten" value="incorrect">Landscapes</label><br>
+                <label>
+                    <input type="radio" name="ten" value="incorrect">Sports</label><br>
+            </div>
+            <br>
+            <!--ANCHOR TO TOP-->
+            <a href="#top">Back to top of page</a>
+            <!--end of form-->
+        </form>
+        <br>
+        <!--button to submit answers and show correct answers-->
+        <button onclick=result();correctAnswers() id="submitBtn">Submit</button>
+        <div>
+            <!--PARAGRAPH TAGS TO DISPLAY IF USER ANSWERS CORRECT/INCORRECT, TOTAL POINTS, TIME TAKEN-->
+            <p id="score"></p>
+            <p id="answers1"></p>
+            <p id="answers2"></p>
+            <p id="answers3"></p>
+            <p id="answers4"></p>
+            <p id="answers5"></p>
+            <p id="answers6"></p>
+            <p id="answers7"></p>
+            <p id="answers8"></p>
+            <p id="answers9"></p>
+            <p id="answers10"></p>
+            <p id="time"></p>
+            <br>
+            <p id="repeat0">Click on Restart to Try Again</p>
+            <!--BUTTON TO RETAKE THE QUIZ-->
+            <button id="repeat" onclick=repeat();backtotop()>Restart</button>
+            <br>
+        </div>
+
+
+    </div>
+    <!--start of the footer section-->
+    <!--creating a two column row with div tags-->
+    <div class="end-row">
+        <!--1st column containing the logo, address and links to socials-->
+        <div class="column">
+            <div class="end-logo">
+                <img src="images/logos/end-logo.png" alt="Colibri logo">
+            </div>
+            <div class="end-address">
+                <!--a link to redirect to google map location when clicked on the address-->
+                <!--overriding the common css with inline css because the background of this section is black-->
+                <a href="https://goo.gl/maps/KMjPHMzVzwzS84rk6" target="_blank" style="color: white;">
+                    <br> No. 10, Trelawney Place, Colombo 04<br> Monday - Friday, 9am - 6pm
+                </a>
+                <br>
+                <br>
+                <!--link to the sitemap-->
+                <a href="site-map.html" style="color: white;"><u>Site Map</u></a><br>
+                <br>
+                <!--div containing the social media icons-->
+                <div>
+                    <!--linking social media icons with the urls of site socials-->
+                    <!--used target="_blank" attribute to open the link in a new browser tab-->
+                    <!--setting the icon size, color and padding with inline css-->
+                    <a href="https://www.facebook.com/iitsl" target="_blank"><i class='bx bxl-meta'
+                            style='font-size: 20px; color: white; padding-right: 7px;'></i></a>
+                    <a href="https://www.instagram.com/iitlife/?hl=en" target="_blank"><i class='bx bxl-instagram-alt'
+                            style='font-size: 20px; color: white; padding-right: 7px;'></i></a>
+                    <a href="-"><i class='bx bxl-twitter'
+                            style='font-size: 20px; color: white; padding-right: 7px;'></i></a>
+                    <a href="-"><i class='bx bxl-pinterest'
+                            style='font-size: 20px; color: white; padding-right: 7px;'></i></a>
+                </div>
+            </div>
+        </div>
+        <!--2nd column containing the email subscription form-->
+        <div class="end-column">
+            <div>
+                <p>Welcome to Colibri Art Gallery</p>
+                <!--overriding the common css with inline css for the p tag font sizing for convenience-->
+                <p style="font-size: 20px;">Sign up for updates on the latest in the art world</p>
+            </div>
+            <div>
+                <!--form to get the user email for subscription-->
+                <form id="form" name="subscribe">
+                    <div class="getmail">
+                        <input id="email-sub" type="email" name="email-sub" placeholder="Email" />
+                        <button id="sub" type="button">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+            <p style="font-size: 11px;">We will process the personal data you have supplied in accordance with janet
+                regulations.</p>
+        </div>
+    </div>
+    <footer>
+        <!-- Copyrights -->
+        <div class="footer-row">
+            <div class="footer-left-column">
+                <p>© 2022 Colibri Art Gallery All rights reserved.</p>
+            </div>
+            <!--page dev information-->
+            <div class="footer-right-column">
+                <!--link to student details page-->
+                <!--also this link is using inline css to override common css because the background of this section is black-->
+                <a href="editor-sevin.html" style="color: white;">Page by Sevin Perera</a>
+            </div>
+        </div>
+    </footer>
+    <!-- End -->
+    <script src="quiz.js"></script>
+</body>
+
+</html>

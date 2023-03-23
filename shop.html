@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+  <link rel="manifest" href="images/site.webmanifest" />
+  <link rel="stylesheet" href="nav-styles.css" />
+  <link rel="stylesheet" href="common-styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Arima:wght@400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="shop.css" />
+  <title>Shop</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <!-- LOGO -->
+    <a href="main.html"><img class="logo" src="images/logos/logo.jpg" alt="logo" /></a>
+    <!-- NAVIGATION MENU -->
+    <!-- USING A CHECKBOX TO ACT AS THE RESPONSIVE TOGGLE -->
+    <input type="checkbox" id="checkbox_toggle" />
+    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+    <!-- NAVIGATION MENU ITEMS -->
+    <ul class="menu">
+      <li><a href="main.html">Home</a></li>
+      <li><a href="gallery.html">Art Gallery</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <!--once clicked it executes the function where it shows the shopping cart section-->
+      <li><i class="bx bx-cart" id="cart-icon" onclick="openCart()"></i></li>
+    </ul>
+  </nav>
+  <div class="separator"></div>
+  <div class="body">
+    <!--Shop-->
+    <div class="shop" id="shop">
+      <h1>Our Products - Prints</h1>
+      <!--Holds the all the products-->
+      <div class="main-container">
+        <!--first product content-->
+        <div class="merch">
+          <!--product image-->
+          <div class="image-box">
+            <img src="images/product/product1.jpg" alt="Girl with a Pearl Earring" class="product-img" />
+          </div>
+          <!--product information for buying-->
+          <div class="description">
+            <h2 class="product-name">Girl with a Pearl Earring</h2>
+            <p class="product-price" data-value="25">$25</p>
+            <p>Size:</p>
+            <input class="size" type="text" name="size" />
+            <small>(small,medium,large)</small>
+            <p>Quantity:</p>
+            <input type="number" value="" class="cart-quantity" />
+            <!--when cart icon is clicked, it will display product information under shopping cart-->
+            <i class="bx bx-cart add-to-cart" onclick="validateCart(event)"></i>
+          </div>
+        </div>
+        <!--second product content-->
+        <div class="merch">
+          <!--product image-->
+          <div class="image-box">
+            <img src="images/product/product2.jpg" alt="The Son of Man" class="product-img" />
+          </div>
+          <!--product information for buying-->
+          <div class="description">
+            <h2 class="product-name">The Son of Man</h2>
+            <p class="product-price" data-value="95">$95</p>
+            <p>Size:</p>
+            <input class="size" type="text" name="size" />
+            <small>(small,medium,large)</small>
+            <p>Quantity:</p>
+            <input type="number" value="" class="cart-quantity" />
+            <!--when cart icon is clicked, it will display product information under shopping cart-->
+            <i class="bx bx-cart add-to-cart" onclick="validateCart(event)"></i>
+          </div>
+        </div>
+        <!--third product content-->
+        <div class="merch">
+          <!--product image-->
+          <div class="image-box">
+            <img src="images/product/product3.jpg" alt="Mona Lisa" class="product-img" />
+          </div>
+          <!--product information for buying-->
+          <div class="description">
+            <h2 class="product-name">Mona Lisa</h2>
+            <p class="product-price" data-value="105">$105</p>
+            <p>Size:</p>
+            <input class="size" type="text" name="size" />
+            <small>(small,medium,large)</small>
+            <p>Quantity:</p>
+            <input type="number" value="" class="cart-quantity" />
+            <!--when cart icon is clicked, it will display product information under shopping cart-->
+            <i class="bx bx-cart add-to-cart" onclick="validateCart(event)"></i>
+          </div>
+        </div>
+        <!--fourth product content-->
+        <div class="merch">
+          <!--product image-->
+          <div class="image-box">
+            <img src="images/product/product4.jpg" alt="The Scream" class="product-img" />
+          </div>
+          <!--product information for buying-->
+          <div class="description">
+            <h2 class="product-name">The Scream</h2>
+            <p class="product-price" data-value="35">$35</p>
+            <p>Size:</p>
+            <input class="size" type="text" name="size" />
+            <small>(small,medium,large)</small>
+            <p>Quantity:</p>
+            <input type="number" value="" class="cart-quantity" />
+            <!--when cart icon is clicked, it will display product information under shopping cart-->
+            <i class="bx bx-cart add-to-cart" onclick="validateCart(event)"></i>
+          </div>
+        </div>
+        <!--fifth product content-->
+        <div class="merch">
+          <!--product image-->
+          <div class="image-box">
+            <img src="images/product/product5.jpg" alt="The Milkmaid" class="product-img" />
+          </div>
+          <!--product information for buying-->
+          <div class="description">
+            <h2 class="product-name">The Milkmaid</h2>
+            <p class="product-price" data-value="47">$47</p>
+            <p>Size:</p>
+            <input class="size" type="text" name="size" />
+            <small>(small,medium,large)</small>
+            <p>Quantity:</p>
+            <input type="number" value="" class="cart-quantity" />
+            <!--when cart icon is clicked, it will display product information under shopping cart-->
+            <i class="bx bx-cart add-to-cart" onclick="validateCart(event)"></i>
+          </div>
+        </div>
+        <!--sixth product content-->
+        <div class="merch">
+          <!--product image-->
+          <div class="image-box">
+            <img src="images/product/product6.jpg" alt="American Gothic" class="product-img" />
+          </div>
+          <!--product information for buying-->
+          <div class="description">
+            <h2 class="product-name">American Gothic</h2>
+            <p class="product-price" data-value="100">$100</p>
+            <p>Size:</p>
+            <input class="size" type="text" name="size" />
+            <small>(small,medium,large)</small>
+            <p>Quantity:</p>
+            <input type="number" value="" class="cart-quantity" />
+            <!--when cart icon is clicked, it will display product information under shopping cart-->
+            <i class="bx bx-cart add-to-cart" onclick="validateCart(event)"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <!--Beginning of Shopping cart-->
+    <h1 id="shopping-cart">Shopping Cart</h1>
+    <!--Holds all details of products added to cart -->
+    <div id="invoice-box" class="receipt"></div>
+    <!--holds the total price-->
+    <div class="invoiceTotal">
+      <p id="invoiceTotal"></p>
+    </div>
+    <!--button that will direct to information page once clicked-->
+    <button type="button" class="buy-button" onclick="checkout()">
+      CHECKOUT
+    </button>
+    <div class="separator"></div>
+    <!--anchor element links to the top of the page-->
+    <a href="#shop"><u>Back to top</u></a>
+    <div class="separator"></div>
+  </div>
+  <!--start of the footer section-->
+  <!--creating a two column row with div tags-->
+  <div class="end-row">
+    <!--1st column containing the logo, address and links to socials-->
+    <div class="column">
+      <div class="end-logo">
+        <img src="images/logos/end-logo.png" alt="Colibri logo" />
+      </div>
+      <div class="end-address">
+        <!--a link to redirect to google map location when clicked on the address-->
+        <!--overriding the common css with inline css because the background of this section is black-->
+        <a href="https://goo.gl/maps/KMjPHMzVzwzS84rk6" target="_blank" style="color: white">
+          <br />
+          No. 10, Trelawney Place, Colombo 04<br />
+          Monday - Friday, 9am - 6pm
+        </a>
+        <br />
+        <br />
+        <!--link to the sitemap-->
+        <a href="site-map.html" style="color: white"><u>Site Map</u></a><br />
+        <br />
+        <!--div containing the social media icons-->
+        <div>
+          <!--linking social media icons with the urls of site socials-->
+          <!--used target="_blank" attribute to open the link in a new browser tab-->
+          <!--setting the icon size, color and padding with inline css-->
+          <a href="https://www.facebook.com/iitsl" target="_blank"><i class="bx bxl-meta"
+              style="font-size: 20px; color: white; padding-right: 7px"></i></a>
+          <a href="https://www.instagram.com/iitlife/?hl=en" target="_blank"><i class="bx bxl-instagram-alt"
+              style="font-size: 20px; color: white; padding-right: 7px"></i></a>
+          <a href="-"><i class="bx bxl-twitter" style="font-size: 20px; color: white; padding-right: 7px"></i></a>
+          <a href="-"><i class="bx bxl-pinterest" style="font-size: 20px; color: white; padding-right: 7px"></i></a>
+        </div>
+      </div>
+    </div>
+    <!--2nd column containing the email subscription form-->
+    <div class="end-column">
+      <div>
+        <p>Welcome to Colibri Art Gallery</p>
+        <!--overriding the common css with inline css for the p tag font sizing for convenience-->
+        <p style="font-size: 20px">
+          Sign up for updates on the latest in the art world
+        </p>
+      </div>
+      <div>
+        <!--form to get the user email for subscription-->
+        <form id="form" name="subscribe">
+          <div class="getmail">
+            <input id="email-sub" type="email" name="email-sub" placeholder="Email" />
+            <button id="sub" type="button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+      <p style="font-size: 11px">
+        We will process the personal data you have supplied in accordance with
+        janet regulations.
+      </p>
+    </div>
+  </div>
+  <footer>
+    <!-- Copyrights -->
+    <div class="footer-row">
+      <div class="footer-left-column">
+        <p>© 2022 Colibri Art Gallery All rights reserved.</p>
+      </div>
+      <!--page dev information-->
+      <div class="footer-right-column">
+        <!--anchor element that links to student details page-->
+        <!--also this link is using inline css to override common css because the background of this section is black-->
+        <a href="editor-smriti.html" style="color: white">Page by Smriti</a>
+      </div>
+    </div>
+  </footer>
+
+  <!--link to JS-->
+  <script src="shop.js"></script>
+</body>
+
+</html>

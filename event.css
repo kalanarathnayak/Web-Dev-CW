@@ -1,0 +1,142 @@
+/* font for heading 2 */
+h2 {
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
+/*layout for container row that holds the contents of event*/
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* layout for column containing information about event */
+.art-gallery {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: stretch;
+}
+
+/* consistent size for all images */
+.art-placeholder-img {
+    width: 380px;
+    height: 214px;
+}
+
+/* styling of paragraph tags (line 29 to 59)*/
+p.event-type {
+    padding-top: 70px;
+    font-size: 20px;
+    margin: 0px;
+}
+
+p.event-time {
+    font-size: 20px;
+    margin: 0px;
+}
+
+p.event-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0px;
+}
+
+p.event-month {
+    padding-left: 115px;
+    padding-top: 50px;
+    font-size: 40px;
+    font-weight: bolder;
+    margin: 0px;
+}
+
+p.event-day {
+    padding-left: 115px;
+    font-size: 40px;
+    font-weight: bolder;
+    margin: 0px;
+}
+
+/* styling for the anchor bar */
+.month-anchor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: bolder;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.month-anchor a {
+    padding: 10px 50px;
+}
+
+/* change color when hovering over the anchor tags */
+.month-anchor a:hover {
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+
+/*image sizes for smaller screens*/
+@media only screen and (max-width: 375px) {
+    .art-placeholder-img {
+        width: 253.34px;
+        height: 142.67px;
+    }
+}
+
+/* for small screen size */
+@media only screen and (max-width: 1050px) {
+    p.event-type {
+        font-size: 20px;
+    }
+
+    p.event-time {
+        font-size: 20px;
+    }
+
+    p.event-title {
+        font-size: 25px;
+    }
+
+    p.event-month {
+        font-size: 30px;
+        padding-left: 0px;
+        padding-top: 30px;
+    }
+
+    p.event-day {
+        font-size: 20px;
+        padding-left: 0px;
+    }
+
+    .art-gallery {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: stretch;
+    }
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        align-items: center;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+
+    .month-anchor {
+        flex-direction: column;
+        align-items: center;
+    }
+}

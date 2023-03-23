@@ -1,0 +1,192 @@
+/*the styling for the heading of the page*/
+.greeting {
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+/*form element div tag basic styling*/
+.submain {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+/* adding padding to every "submain" class except for the first one*/
+.submain:not(:first-child) {
+    padding-top: 30px;
+}
+
+/*styling for input, dropdown list and text area*/
+input,
+select,
+textarea {
+    padding: 11px;
+    background-color: rgb(227, 227, 227);
+    border: 2px solid rgb(227, 227, 227);
+    font-size: 14px;
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
+/*styling for input, dropdown list and text area when they are in focus*/
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border: 2px solid #555;
+    transition: 0.5s;
+}
+
+/*edit button margin*/
+.edit {
+    margin-right: 30px;
+}
+
+/*send button styling*/
+.send {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+}
+
+/*send button styling when in focus*/
+.send:focus {
+    border: none;
+}
+
+/*send button styling when hovered over*/
+.send:hover {
+    background-color: black;
+    color: white;
+}
+
+/*hiding the default arrow pointer in drop down list*/
+select {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+}
+
+/*only allowing resizing of the text area vertically*/
+textarea {
+    resize: vertical;
+}
+
+.description {
+    padding-left: 40px;
+}
+
+.descriptionLast {
+    padding-left: 15px;
+}
+
+.controls {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/*placeholder image size set to 100%*/
+img {
+    width: 100%;
+    height: 100%;
+}
+
+/*styling for div layout row*/
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/*styling for div layout column*/
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.contact-container:not(:first-child) {
+    align-items: center;
+}
+
+.contact-container form {
+    padding-right: 50px;
+}
+
+#preview {
+    margin-bottom: 30px;
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
+.test {
+    box-sizing: border-box;
+    display: flex;
+    padding-bottom: 20px;
+}
+
+/* back to top button styling*/
+#topBtn {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 8px;
+    z-index: 1;
+    font-size: 24px;
+    text-align: center;
+    border: none;
+    outline: none;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(117, 116, 116);
+    color: white;
+    cursor: pointer;
+    padding: 10px 10px 2px;
+    border-radius: 50%;
+}
+
+/* back to top button styling on hover*/
+#topBtn:hover {
+    background-color: rgb(187, 187, 187);
+    color: black;
+}
+
+/*responsive design for smaller screens*/
+@media only screen and (max-width: 1400px) {
+    img {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+
+@media only screen and (max-width: 1000px) {
+    img {
+        width: 350px;
+        height: 350px;
+    }
+
+    .row {
+        flex-direction: column-reverse;
+    }
+
+    .contact-container form {
+        padding-right: 0;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .contact-container form {
+        padding-right: 0;
+    }
+
+    h1 {
+        text-align: center;
+    }
+}

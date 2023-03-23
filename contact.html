@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+    <link rel="manifest" href="images/site.webmanifest" />
+    <link rel="stylesheet" href="nav-styles.css" />
+    <link rel="stylesheet" href="common-styles.css" />
+    <link rel="stylesheet" href="contact-styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300&display=swap" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <!--back to top button-->
+    <button onclick="topFunc()" id="topBtn" title="Go to top">&#8963;</button>
+    <nav class="navbar">
+        <!-- LOGO -->
+        <a href="main.html"><img class="logo" src="images/logos/logo.jpg" alt="logo" /></a>
+        <!-- NAVIGATION MENU -->
+        <!-- USING A CHECKBOX TO ACT AS THE RESPONSIVE TOGGLE -->
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <!-- NAVIGATION MENU ITEMS -->
+        <ul class="menu">
+            <li><a href="main.html">Home</a></li>
+            <li><a href="gallery.html">Art Gallery</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+    </nav>
+    <div class="separator"></div>
+    <div class="body">
+        <!--page heading-->
+        <h1 id="greeting" class="greeting">Get in touch with us</h1>
+        <!--creating a two column row with div tag-->
+        <div class="row">
+            <!--creating the 1st column of the row that contains the form-->
+            <div class="contact-container">
+                <!--customer detail form data will mail to email upon submission-->
+                <form id="formq" name="contact-us" action="mailto:indusara.20211322@iit.ac.lk" method="post"
+                    enctype="text/plain">
+                    <!--send the data as plain text-->
+                    <!--separate containers for each input field with div class "submain"-->
+                    <div class="submain">
+                        <label for="topic">Choose a topic</label>
+                        <select id="topic" name="chooseTopic">
+                            <!--drop down list for topic selection-->
+                            <option value="Delivery inquiries">Delivery inquiries</option>
+                            <option value="General inquiries">General inquiries</option>
+                            <option value="Exhibit reservation inquiries">
+                                Exhibit reservation inquiries
+                            </option>
+                        </select>
+                    </div>
+                    <div class="submain">
+                        <!--text input field to get customer name-->
+                        <label for="name">Name</label>
+                        <input id="name" type="text" name="name" />
+                    </div>
+                    <div class="submain">
+                        <!--email input field to get customer email-->
+                        <label for="email">Email</label>
+                        <input id="email" type="email" name="email" />
+                    </div>
+                    <div class="submain">
+                        <!--text area to get customer message-->
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" rows="5"></textarea>
+                    </div>
+                    <div class="controls">
+                        <!--button to show a preview of user inputted data-->
+                        <!--function explanation is done in javaScript file-->
+                        <button type="button" onclick="required()">View Query</button>
+                    </div>
+                </form>
+                <!--separate div to contain user inputted data for previewing-->
+                <div id="preview">
+                    <h1>Your message summary</h1>
+                    <div class="test">
+                        <div><b>Topic:</b></div>
+                        <div class="description" id="topicPreview"></div>
+                    </div>
+                    <div class="test">
+                        <div><b>Name:</b></div>
+                        <div class="description" id="namePreview"></div>
+                    </div>
+                    <div class="test">
+                        <div><b>Email:</b></div>
+                        <div class="description" id="emailPreview"></div>
+                    </div>
+                    <div class="test">
+                        <div><b>Message:</b></div>
+                        <div class="descriptionLast" id="messagePreview"></div>
+                    </div>
+                </div>
+                <!--submit and edit buttons in the preview section-->
+                <div id="se-controls" class="secondory-controls">
+                    <!--on click function are explained in the javaScript file-->
+                    <button class="edit" type="button" onclick="editField()">Edit</button>
+                    <input class="send" type="submit" value="Send" onclick="submitForm()" />
+                </div>
+            </div>
+            <!--creating the 2nd column of the row that a placeholder image-->
+            <div class="contact-container">
+                <img src="images/contact-us-image.png" alt="img" />
+            </div>
+        </div>
+    </div>
+    <!--start of the footer section-->
+    <!--creating a two column row with div tags-->
+    <div class="end-row">
+        <!--1st column containing the logo, address and links to socials-->
+        <div class="column">
+            <div class="end-logo">
+                <img src="images/logos/end-logo.png" alt="Colibri logo">
+            </div>
+            <div class="end-address">
+                <!--a link to redirect to google map location when clicked on the address-->
+                <!--overriding the common css with inline css because the background of this section is black-->
+                <a href="https://goo.gl/maps/KMjPHMzVzwzS84rk6" target="_blank" style="color: white;">
+                    <br> No. 10, Trelawney Place, Colombo 04<br> Monday - Friday, 9am - 6pm
+                </a>
+                <br>
+                <br>
+                <!--link to the sitemap-->
+                <a href="site-map.html" style="color: white;"><u>Site Map</u></a><br>
+                <br>
+                <!--div containing the social media icons-->
+                <div>
+                    <!--linking social media icons with the urls of site socials-->
+                    <!--used target="_blank" attribute to open the link in a new browser tab-->
+                    <!--setting the icon size, color and padding with inline css-->
+                    <a href="https://www.facebook.com/iitsl" target="_blank"><i class='bx bxl-meta'
+                            style='font-size: 20px; color: white; padding-right: 7px;'></i></a>
+                    <a href="https://www.instagram.com/iitlife/?hl=en" target="_blank"><i class='bx bxl-instagram-alt'
+                            style='font-size: 20px; color: white; padding-right: 7px;'></i></a>
+                    <a href="-"><i class='bx bxl-twitter'
+                            style='font-size: 20px; color: white; padding-right: 7px;'></i></a>
+                    <a href="-"><i class='bx bxl-pinterest'
+                            style='font-size: 20px; color: white; padding-right: 7px;'></i></a>
+                </div>
+            </div>
+        </div>
+        <!--2nd column containing the email subscription form-->
+        <div class="end-column">
+            <div>
+                <p>Welcome to Colibri Art Gallery</p>
+                <!--overriding the common css with inline css for the p tag font sizing for convenience-->
+                <p style="font-size: 20px;">Sign up for updates on the latest in the art world</p>
+            </div>
+            <div>
+                <!--form to get the user email for subscription-->
+                <form id="form" name="subscribe">
+                    <div class="getmail">
+                        <input id="email-sub" type="email" name="email-sub" placeholder="Email" />
+                        <button id="sub" type="button">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+            <p style="font-size: 11px;">We will process the personal data you have supplied in accordance with janet
+                regulations.</p>
+        </div>
+    </div>
+    <footer>
+        <!-- Copyrights -->
+        <div class="footer-row">
+            <div class="footer-left-column">
+                <p>© 2022 Colibri Art Gallery All rights reserved.</p>
+            </div>
+            <!--page dev information-->
+            <div class="footer-right-column">
+                <!--link to student details page-->
+                <!--also this link is using inline css to override common css because the background of this section is black-->
+                <a href="editor-page-kalana.html" style="color: white;">Page by Kalana</a>
+            </div>
+        </div>
+    </footer>
+    <!-- End -->
+    <script src="contact-script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+/*CHANGE BACKGROUND COLOR ACCORDING TO  RESULT*/
+.excellent{
+    background-color: #2ECC71;
+}
+.good{
+    background-color: #3498DB;
+}
+.bad{
+    background-color: #F1948A ;
+}
+/* FONT FOR QUESTIONS ANS ANSWERS*/
+form {
+    font-family: 'M PLUS 1p', sans-serif;
+}
+/*FONT SIZE OF QUESTIONS*/
+.q{
+    font-size: 20px;
+}
+/*TIMER BOLDER AND LARGER*/
+#timer{
+    font-size: 20px;
+    font-weight: bolder;
+}

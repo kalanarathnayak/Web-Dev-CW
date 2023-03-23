@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+  <link rel="manifest" href="images/site.webmanifest" />
+  <link rel="stylesheet" href="nav-styles.css" />
+  <link rel="stylesheet" href="common-styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Arima:wght@400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="information.css" />
+  <title>Information</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <!-- LOGO -->
+    <a href="main.html"><img class="logo" src="images/logos/logo.jpg" alt="logo" /></a>
+    <!-- NAVIGATION MENU -->
+    <!-- USING A CHECKBOX TO ACT AS THE RESPONSIVE TOGGLE -->
+    <input type="checkbox" id="checkbox_toggle" />
+    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+    <!-- NAVIGATION MENU ITEMS -->
+    <ul class="menu">
+      <li><a href="main.html">Home</a></li>
+      <li><a href="gallery.html">Art Gallery</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+    </ul>
+  </nav>
+  <div class="separator"></div>
+  <div class="body">
+    <!--Information-->
+    <div class="info-container" id="info-container">
+      <!--breadcrumb-->
+      <div class="breadcrumb">
+        <!--contains anchor element which links the shop page-->
+        <a href="shop.html">Shop</a>
+        <p>> Information</p>
+      </div>
+      <!--Content-->
+      <div class="address-container">
+        <form method="post">
+          <h1>Contact Information</h1>
+
+          <!--EMAIL FIELD-->
+          <div class="info-field">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email" />
+          </div>
+
+          <!--FIRST NAME-->
+          <div class="info-field">
+            <label for="f-name">First name</label>
+            <input type="text" name="First Name" id="f-name" placeholder="First name" />
+          </div>
+
+          <!--LAST NAME-->
+          <div class="info-field">
+            <label for="l-name">Last name</label>
+            <input type="text" name="Surname" id="l-name" placeholder="Last name" />
+          </div>
+
+          <h1>Shipping Address</h1>
+          <!--COUNTRY DROPDOWN-->
+          <div class="info-field">
+            <label for="country">Country </label>
+            <select name="country" id="country">
+              <option value="Sri Lanka">Sri Lanka</option>
+            </select>
+          </div>
+
+          <!--HOME ADDRESS-->
+          <div class="info-field">
+            <label for="address">Address </label>
+            <textarea name="address" id="address" cols="25" rows="5" placeholder="Full Address"></textarea>
+          </div>
+
+          <div class="separator"></div>
+          <!--button once clicked will execute the function validate()-->
+          <div class="button">
+            <button type="button" onclick="validate()">Check Out</button>
+          </div>
+        </form>
+        <div class="separator"></div>
+        <!--anchor element to link to the top of the page-->
+        <a href="#info-container"><u>Back to top</u></a>
+        <div class="separator"></div>
+      </div>
+    </div>
+  </div>
+  <!--start of the footer section-->
+  <!--creating a two column row with div tags-->
+  <div class="end-row">
+    <!--1st column containing the logo, address and links to socials-->
+    <div class="column">
+      <div class="end-logo">
+        <img src="images/logos/end-logo.png" alt="Colibri logo" />
+      </div>
+      <div class="end-address">
+        <!--a link to redirect to google map location when clicked on the address-->
+        <!--overriding the common css with inline css because the background of this section is black-->
+        <a href="https://goo.gl/maps/KMjPHMzVzwzS84rk6" target="_blank" style="color: white">
+          <br />
+          No. 10, Trelawney Place, Colombo 04<br />
+          Monday - Friday, 9am - 6pm
+        </a>
+        <br />
+        <br />
+        <!--link to the sitemap-->
+        <a href="site-map.html" style="color: white"><u>Site Map</u></a><br />
+        <br />
+        <!--div containing the social media icons-->
+        <div>
+          <!--linking social media icons with the urls of site socials-->
+          <!--used target="_blank" attribute to open the link in a new browser tab-->
+          <!--setting the icon size, color and padding with inline css-->
+          <a href="https://www.facebook.com/iitsl" target="_blank"><i class="bx bxl-meta"
+              style="font-size: 20px; color: white; padding-right: 7px"></i></a>
+          <a href="https://www.instagram.com/iitlife/?hl=en" target="_blank"><i class="bx bxl-instagram-alt"
+              style="font-size: 20px; color: white; padding-right: 7px"></i></a>
+          <a href="-"><i class="bx bxl-twitter" style="font-size: 20px; color: white; padding-right: 7px"></i></a>
+          <a href="-"><i class="bx bxl-pinterest" style="font-size: 20px; color: white; padding-right: 7px"></i></a>
+        </div>
+      </div>
+    </div>
+    <!--2nd column containing the email subscription form-->
+    <div class="end-column">
+      <div>
+        <p>Welcome to Colibri Art Gallery</p>
+        <!--overriding the common css with inline css for the p tag font sizing for convenience-->
+        <p style="font-size: 20px">
+          Sign up for updates on the latest in the art world
+        </p>
+      </div>
+      <div>
+        <!--form to get the user email for subscription-->
+        <form id="form" name="subscribe">
+          <div class="getmail">
+            <input id="email-sub" type="email" name="email-sub" placeholder="Email" />
+            <button id="sub" type="button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+      <p style="font-size: 11px">
+        We will process the personal data you have supplied in accordance with
+        janet regulations.
+      </p>
+    </div>
+  </div>
+  <footer>
+    <!-- Copyrights -->
+    <div class="footer-row">
+      <div class="footer-left-column">
+        <p>© 2022 Colibri Art Gallery All rights reserved.</p>
+      </div>
+      <!--page dev information-->
+      <div class="footer-right-column">
+        <!--link to student details page-->
+        <!--also this link is using inline css to override common css because the background of this section is black-->
+        <a href="editor-smriti.html" style="color: white">Page by Smriti</a>
+      </div>
+    </div>
+  </footer>
+  <!-- End -->
+
+  <!--link to JS-->
+  <script src="information.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+    <link rel="manifest" href="images/site.webmanifest" />
+    <link rel="stylesheet" href="nav-styles.css" />
+    <link rel="stylesheet" href="common-styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300&display=swap" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="gallery-styles.css" />
+    <title>gallery</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <!-- LOGO -->
+        <a href="main.html"><img class="logo" src="images/logos/logo.jpg" alt="logo" /></a>
+        <!-- NAVIGATION MENU -->
+        <!-- USING A CHECKBOX TO ACT AS THE RESPONSIVE TOGGLE -->
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <!-- NAVIGATION MENU ITEMS -->
+        <ul class="menu">
+            <li><a href="main.html">Home</a></li>
+            <li><a href="gallery.html">Art Gallery</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+    </nav>
+    <div class="separator"></div>
+    <div class="body">
+        <!---division containing the heading and, form element for background color change and font color change-->
+        <div class="headerContainer">
+            <div class="heading" id="topGallery">
+                <h1>Art Gallery</h1>
+            </div>
+            <!---division containing the background color change and font color change-->
+            <div class="selector">
+                <form name="themes">
+                    <!--select element to create a drop down list for the background colors, 
+                    to reference the form data after the form is submitted name attribute is used,
+                    onchange event used to change the background colors -->
+                    <select name="colorChange" id="colors" onchange="color()">
+                        <option>Background color</option>
+                        <option value="#FFFFFF">White</option>
+                        <option value="#000000">Black</option>
+                        <option value="#bdb0d0">Pastel Lilac</option>
+                        <option value="#99c5c4">Pastel Turquoise</option>
+                        <option value="#B0C3D6">Pastel Blue</option>
+                        <option value="#C5D2EF">Crayola's Periwinkle</option>
+                        <option value="#F2DCD3">Beige</option>
+                        <option value="#F8E0DE">Pale Pink</option>
+                        <option value="#ff9899">American Pink</option>
+                        <option value="#D291BC">Pastel Violet</option>
+                        <option value="#E0BBE4">Thistle</option>
+                        <option value="#77DF79">Pastel Green</option>
+                        <option value="#7CD4BB">Pearl Aqua</option>
+                        <option value="#E1CEC9">Dust Storm</option>
+                        <option value="#DADAD9">Light Silver</option>
+                        <option value="#F2E3CF">Champagne Pink</option>
+                        <option value="#00C0D0">Turquoise Surf</option>
+                        <option value="#b39eb5">Pastel Purple</option>
+                        <option value="#C9A4A0">Rosy Brown</option>
+                        <option value="#E7BDB3">Burly Wood</option>
+                    </select>
+                    <!--select element to create a drop down list for the font colors, 
+                    to reference the form data after the form is submitted name attribute is used,
+                    onchange event used to change the font colors -->
+                    <select name="backGround" id="font" onChange="updateTextColour()">
+                        <option>Text color</option>
+                        <option value="#000000">Black</option>
+                        <option value="#FF0000">Red</option>
+                        <option value="#008000">Green</option>
+                        <option value="#0206FF">Blue</option>
+                        <option value=" #6A0888">Purple</option>
+                        <option value=" #008B8B">DarkCyan</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <!---div tag containing all the pictures, title and artist and description of the pictures-->
+        <div class="container1">
+            <!---div tag containing the first picture, title and artist and description of the  first picture-->
+            <div class="polaroid">
+                <div id="painting1" class="divSize">
+                    <img src="images/gallery-img/Mona_Lisa.jpg" alt="Mona Lisa" class="pictureSize" />
+                </div>
+
+                <div class="painting-title">
+                    <h4>Mona Lisa</h4>
+                    <div class="artist">
+                        <p>Artist- Leonardo da Vinci</p>
+                    </div>
+                </div>
+
+                <div class="text1" id="imagetext1">
+                    <p>Mona Lisa</p>
+                    <p>Artist - Leonardo da Vinci</p>
+                    <p>Year - 1503</p>
+                    <br />
+                    <p>
+                        This painting features a picture of an elegantly dressed, seated woman, against an imaginary
+                        scenery.
+                        This is one of the most valuable and famous painting with the Guinness Wold Record.
+                    </p>
+                </div>
+            </div>
+            <!---div tag containing the second picture, title and artist and description of the second picture-->
+            <div class="polaroid">
+                <div id="painting2" class="divSize">
+                    <img src="images/gallery-img/Girl_with_a_pearl_earring.jpg" alt="Girl with Pearl Earring"
+                        class="pictureSize" />
+                </div>
+                <div class="painting-title">
+                    <h4>Girl with Pearl Earring</h4>
+                    <div class="artist">
+                        <p>Artist- Johannes Vermeer</p>
+                    </div>
+                </div>
+                <div class="text1" id="imagetext2">
+                    <p>Girl with Pearl Earring</p>
+                    <p>Artist -Johannes Vermeer</p>
+                    <p>Year - 1665</p>
+                    <br />
+                    <p>
+                        The girl in this picture is attracted by the viewers for her simplicity as she wears a gold
+                        coloured jacket
+                        and a matching turban which is blue and gold with Pearl earring. She is conveying a message with
+                        her
+                        facial expressions.
+                    </p>
+                </div>
+            </div>
+            <!---div tag containing the third picture, title and artist and description of the third picture-->
+            <div class="polaroid">
+                <div id="painting3" class="divSize">
+                    <img src="images/gallery-img/scream.jpg" alt="The Scream" class="pictureSize" />
+                </div>
+                <div class="painting-title">
+                    <h4>The Scream</h4>
+                    <div class="artist">
+                        <p>Artist- Edvard Munch</p>
+                    </div>
+                </div>
+                <div class="text1" id="imagetext3">
+                    <p>The Scream<br /></p>
+                    <p>Artist - Edvard Munch</p>
+                    <p>Year - 1893</p>
+                    <br />
+                    <p>
+                        This was painted as a result of a traumatic incident he faced while walking forward on a bridge
+                        leaving his two friends behind.
+                        The state of being anxious is expressed by the shocked face in this art.
+                    </p>
+                </div>
+            </div>
+            <!---div tag containing the fourth picture, title and artist and description of the fourth picture-->
+            <div class="polaroid">
+                <div id="painting4" class="divSize">
+                    <img src="images/gallery-img/son_of_man.jpg" alt="The Son of Man" class="pictureSize" />
+                </div>
+                <div class="painting-title">
+                    <h4>The Son of Man</h4>
+                    <div class="artist">
+                        <p>Artist- René Magritte</p>
+                    </div>
+                </div>
+                <div class="text1" id="imagetext4">
+                    <p>The Son of Man</p>
+                    <p>Artist- René Magritte</p>
+                    <p>Year - 1946</p>
+                    <br />
+                    <p>
+                        This self-portrait has the face of the man, wearing a coat in blue, covered by a green apple
+                        which
+                        expresses that everything we see hides another and from the peeking
+                        eyes of the man over the edge of the apple shows that we always have the urge to see what is
+                        hidden by what we see.
+                    </p>
+                </div>
+            </div>
+            <!---div tag containing the fifth picture, title and artist and description of the fifth picture-->
+            <div class="polaroid">
+                <div id="painting5" class="divSize">
+                    <img src="images/gallery-img/vanGogh.jpg" alt="Van Gogh's Self-Portrait" class="pictureSize" />
+                </div>
+                <div class="painting-title">
+                    <h4>Self-Portrait with Grey Felt Hat</h4>
+                    <div class="artist">
+                        <p>Artist- Vincent van Gogh</p>
+                    </div>
+                </div>
+                <div class="text1" id="imagetext5">
+                    <p>Self-Portrait with Grey Felt Hat</p>
+                    <p>Artist- Vincent van Gogh</p>
+                    <p>Year - 1887</p>
+                    <br />
+                    <p>
+                        This artwork is a self- portrait of himself with Grey Felt Hat. He focused on the
+                        dotted Pointillist technique and applied it in his own style. He has used long brushstrokes with
+                        complementary
+                        colours by applying orange and blue for the background, green and red for the eyes and beard.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <div class="container2" id="topPreview">
+            <h1>Painting Preview Selection</h1>
+            <!---Radio buttons-->
+            <div class="buttons">
+                <form name="painting-selection" class="formBg" id="chosen">
+                    <input type="radio" name="art" value="Mona_Lisa" id="firstPicture" /><label for="firstPicture">Mona
+                        Lisa</label>
+                    <input type="radio" name="art" value="Girl_with_Pearl_Earring" id="secondPicture" /><label
+                        for="secondPicture">Girl with Pearl Earring</label>
+                    <input type="radio" name="art" value="scream" id="thirdPicture" /><label for="thirdPicture">The
+                        Scream</label>
+                    <input type="radio" name="art" value="The_son_of_man" id="fourthPicture" /><label
+                        for="fourthPicture">The Son of Man</label>
+                    <input type="radio" name="art" value="self_portrait" id="fifthPicture" /><label
+                        for="fifthPicture">Self-Portrait with Grey Felt Hat</label>
+                    <!-- Buttons -->
+                    <div class="formbuttons">
+                        <!-- reset button> -->
+                        <button id="button3" type="reset">RESET</button>
+                        <!-- click here to display button -->
+                        <button id="button2" type="button" onclick="display(this.form);">Click here to display</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <!---viewing area to display larger image and to display description-->
+        <div class="container3" id="topPainting">
+            <h1>Painting</h1>
+            <!---displaying the viewing area for larger image and description-->
+            <div class="polaroid3" id="polaroid3">
+                <!--- div tag to display large painting-->
+                <div class="painting" id="selected"></div>
+                <!--div tag to display painting name, artist, year and description-->
+                <div class="artDescription" id="description"></div>
+            </div>
+        </div>
+    </div>
+    <div class="separator"></div>
+    <!--back to top links-->
+    <div id="toTop">
+        <a href="#topGallery">
+            <p><u>Back to Art Gallery</u></p>
+        </a>
+        <a href="#topPreview">
+            <p><u>Back to Painting Preview Section</u></p>
+        </a>
+        <a href="#topPainting">
+            <p><u>Back to Painting</u></p>
+        </a>
+    </div>
+    <script src="gallery.js"></script>
+    <div class="separator"></div>
+    <!--start of the footer section-->
+    <!--creating a two column row with div tags-->
+    <div class="end-row">
+        <!--1st column containing the logo, address and links to socials-->
+        <div class="column">
+            <div class="end-logo">
+                <img src="images/logos/end-logo.png" alt="Colibri logo">
+            </div>
+            <div class="end-address">
+                <!--a link to redirect to google map location when clicked on the address-->
+                <!--overriding the common css with inline css because the background of this section is black-->
+                <a href="https://goo.gl/maps/KMjPHMzVzwzS84rk6" target="_blank" style="color: white;">
+                    <br> No. 10, Trelawney Place, Colombo 04<br> Monday - Friday, 9am - 6pm
+                </a>
+                <br>
+                <br>
+                <!--link to the sitemap-->
+                <a href="site-map.html" style="color: white;"><u>Site Map</u></a><br>
+                <br>
+                <!--div containing the social media icons-->
+                <div>
+                    <!--linking social media icons with the urls of site socials-->
+                    <!--used target="_blank" attribute to open the link in a new browser tab-->
+                    <!--setting the icon size, color and padding with inline css-->
+                    <a href="https://www.facebook.com/iitsl" target="_blank"><i class='bx bxl-meta'
+                            style='font-size: 20px; color: white; padding-right: 7px;'></i></a>
+                    <a href="https://www.instagram.com/iitlife/?hl=en" target="_blank"><i class='bx bxl-instagram-alt'
+                            style='font-size: 20px; color: white; padding-right: 7px;'></i></a>
+                    <a href="-"><i class='bx bxl-twitter'
+                            style='font-size: 20px; color: white; padding-right: 7px;'></i></a>
+                    <a href="-"><i class='bx bxl-pinterest'
+                            style='font-size: 20px; color: white; padding-right: 7px;'></i></a>
+                </div>
+            </div>
+        </div>
+        <!--2nd column containing the email subscription form-->
+        <div class="end-column">
+            <div>
+                <p>Welcome to Colibri Art Gallery</p>
+                <!--overriding the common css with inline css for the p tag font sizing for convenience-->
+                <p style="font-size: 20px;">Sign up for updates on the latest in the art world</p>
+            </div>
+            <div>
+                <!--form to get the user email for subscription-->
+                <form id="form" name="subscribe">
+                    <div class="getmail">
+                        <input id="email-sub" type="email" name="email-sub" placeholder="Email" />
+                        <button id="sub" type="button">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+            <p style="font-size: 11px;">We will process the personal data you have supplied in accordance with janet
+                regulations.</p>
+        </div>
+    </div>
+    <footer>
+        <!-- Copyrights -->
+        <div class="footer-row">
+            <div class="footer-left-column">
+                <p>© 2022 Colibri Art Gallery All rights reserved.</p>
+            </div>
+            <!--page dev information-->
+            <div class="footer-right-column">
+                <!--link to student details page-->
+                <!--also this link is using inline css to override common css because the background of this section is black-->
+                <a href="editor-page-harshana.html" style="color: white;">Page by Harshana Thayalan</a>
+            </div>
+        </div>
+    </footer>
+    <!-- End -->
+</body>
+
+</html>

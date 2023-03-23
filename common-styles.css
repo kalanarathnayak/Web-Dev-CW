@@ -1,0 +1,247 @@
+/* universal scroll behavior for the web site */
+html {
+    scroll-behavior: smooth;
+}
+
+/* general styling for the body of the webpages throughout the website */
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+/* general styling for anchor tags throughout the website */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* a div tag is styled to act as a thick divider */
+.separator {
+    box-sizing: border-box;
+    position: relative;
+    min-height: 50px;
+}
+
+/** 
+* main content of the webpage is inside of a this div tag and it is styled to have padding left and right 
+* so that the content isn't touching the edges of the display.
+*/
+.body {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+/* general styling for paragraphs throughout the website*/
+p {
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
+/* general styling for heading 1 tags throughout the website */
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+}
+
+/* styling for the last section's left side address of the web page. */
+.end-address {
+    text-align: left;
+    justify-content: center;
+    font-size: 14px;
+}
+
+/* styling for div tag to act as a row of a table in the last part of the webpage. */
+.end-row {
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: white;
+    background-color: rgb(24, 24, 24);
+    font-family: 'M PLUS 1p', sans-serif;
+    align-items: center;
+}
+
+/* styling for div tag to act as a column of the "end-row" div. */
+.end-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    justify-content: space-evenly;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* the last section's left side logo of the web page. */
+.end-logo img {
+    width: 233.5px;
+    height: 162.5px;
+}
+
+/* styling for email subscribe button*/
+#sub {
+    padding: 10px 70px;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+}
+
+/** 
+* styling for email subscribe button
+* on hover it will invert colors.
+*/
+#sub:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(24, 24, 24);
+}
+
+/* styling for email subscribe input field*/
+#email-sub {
+    width: 100%;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 11px;
+}
+
+/** 
+* styling for email subscribe button
+* on focus it won't show the default blue outline.
+*/
+#email-sub:focus {
+    outline: none;
+}
+
+/* styling for div tag that contains subscribe email input field and button */
+.getmail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* setting a placeholder text for email input field */
+::placeholder {
+    color: rgb(255, 255, 255);
+    opacity: 1;
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 14px;
+}
+
+/* general styling for buttons throughout the website */
+button {
+    padding: 10px 20px;
+    background-color: rgb(227, 227, 227);
+    border: none;
+    font-size: 14px;
+    font-family: 'M PLUS 1p', sans-serif;
+    cursor: pointer;
+}
+
+/** 
+* general styling for buttons throughout the website
+* for the hover effect.
+* it will invert colors.
+*/
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* general styling for div grid columns throughout the website */
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+/* general styling for the footer that is used throughout the website */
+footer {
+    background-color: black;
+    color: white;
+}
+
+.footer-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* general styling for footer div grid right side column throughout the website */
+.footer-right-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: flex-end;
+    justify-content: center;
+    padding-right: 50px;
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 12px;
+}
+
+/* general styling for footer div grid left side column throughout the website */
+.footer-left-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-left: 50px;
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 12px;
+}
+
+/* general styling for labels throughout the website */
+label {
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-family: 'M PLUS 1p', sans-serif;
+    font-weight: bolder;
+}
+
+/* responsive design elements */
+@media only screen and (max-width: 1100px) {
+    #sub {
+        padding: 10px 25px;
+    }
+}
+
+/* responsive design elements */
+@media only screen and (max-width: 730px) {
+    .body {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .end-row {
+        padding: 0;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .end-address {
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .end-column {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-right-column {
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+
+    .footer-left-column {
+        padding-left: 0;
+    }
+}

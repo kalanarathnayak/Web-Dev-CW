@@ -1,0 +1,91 @@
+#cart-icon {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.shop {
+  max-width: 1068px;
+  margin: 70px;
+  width: 100%;
+}
+
+/* container that holds all the product cards */
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+  gap: 65px;
+}
+
+/*product card */
+.merch {
+  position: relative;
+  border: 1px solid black;
+  padding: 18px;
+}
+
+/* holds information on product */
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a,
+small {
+  font-family: "M PLUS 1p", sans-serif;
+}
+
+.product-img {
+  width: 275px;
+}
+
+.product-name {
+  margin-bottom: 7px;
+  font-family: "M PLUS 1p", sans-serif;
+}
+
+.product-price {
+  padding-bottom: 10px;
+  font-family: "M PLUS 1p", sans-serif;
+}
+
+/* .add to cart icon */
+.add-to-cart {
+  cursor: pointer;
+  padding: 10px 50px;
+  background-color: black;
+  color: white;
+  left: 100px;
+}
+
+/* icon changes colour when user hovers over it */
+.add-to-cart:hover {
+  background-color: #545352;
+}
+
+.cart-quantity {
+  border: 1px solid black;
+  width: 40px;
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.buy-button {
+  display: flex;
+  margin: 10px auto;
+  cursor: pointer;
+  padding: 10px 150px;
+  background-color: white;
+}
+
+.buy-button:hover {
+  background: black;
+  color: white;
+}
+
+.invoiceTotal {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}

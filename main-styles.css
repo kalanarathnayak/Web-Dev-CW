@@ -1,0 +1,209 @@
+/* hides all slides */
+.mySlides {
+    display: none
+}
+
+/* align the image in the middle along the vertical axis*/
+img {
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: auto;
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 7px;
+    width: 7px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    position: relative;
+    top: -50px;
+}
+
+/* change color when hover over indicator dots */
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
+
+/* styling for the text container on top of the slideshow */
+.welcome-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0 5px 10px #00000063;
+    display: flex;
+
+}
+
+/* changes the background color on hover effect */
+.welcome-text:hover {
+    background-color: #ffffff77;
+}
+
+/* styling for the text (paragraph) on top of the slideshow */
+.welcome-text p {
+    font-family: 'Karla', sans-serif;
+    color: black;
+    font-size: 30px;
+    margin: 0px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* styling for row of the div grid*/
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    font-weight: bolder;
+}
+
+/* set the image size*/
+.placeholder-img {
+    width: 380px;
+    height: 214px;
+}
+
+/* set the image size*/
+.art-placeholder-img-container img {
+    width: 100%;
+    height: 100%;
+}
+
+/* image container div styling for image fit*/
+.art-placeholder-img-container {
+    object-fit: cover;
+}
+
+.info-container {
+    font-weight: bolder;
+    width: 380px;
+}
+
+/* styling div tag that contains text */
+.art-gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    align-items: center;
+}
+
+/* styling div tag that contains text */
+.address {
+    width: 200px;
+    text-align: left;
+
+}
+
+.source {
+    font-size: 10px;
+    font-weight: 300px;
+}
+
+.p-source {
+    margin: 0;
+}
+
+.event-title {
+    font-size: 20px;
+}
+
+.p-date {
+    font-size: 14px;
+}
+
+/* for small screen size */
+@media only screen and (max-width: 730px) {
+    .welcome-text p {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .placeholder-img {
+        width: 253px;
+        height: 142px;
+    }
+
+    .info-container {
+        width: 253px;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        text-align: center;
+    }
+}

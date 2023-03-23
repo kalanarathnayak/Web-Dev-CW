@@ -1,0 +1,84 @@
+/* styling for div grid row */
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+}
+
+/* styling for div grid column */
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+/* styling for div grid right side column */
+.column-right {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    padding: 60px;
+}
+
+/* setting the w*h of the placeholder image*/
+img {
+    width: 632.4px;
+    height: 566.4px;
+}
+
+/* applying padding all around the body of the html document*/
+body {
+    padding: 80px;
+}
+
+/*styling for the paragraph*/
+p {
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 16px;
+}
+
+/*setting the font family of the unordered list*/
+ul {
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
+/* setting the color of the anchor tag*/
+a {
+    color: black;
+}
+
+/* setting the font styling attributes for the span tags */
+span {
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+}
+
+.sName {
+    margin-right: 12px;
+}
+
+.sRole {
+    margin-right: 30px;
+}
+
+/*optimizing the page for mobile screens*/
+@media only screen and (max-width: 730px) {
+    .row {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .column-right {
+        padding: 0px;
+    }
+
+    img {
+        width: 316.2px;
+        height: 283.2px;
+    }
+}

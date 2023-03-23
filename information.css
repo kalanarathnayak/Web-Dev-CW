@@ -1,0 +1,49 @@
+/* layout for each field box and label */
+.info-field {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+/* display layout of the breadcrumb */
+.breadcrumb {
+  display: flex;
+  align-items: baseline;
+}
+
+/*styling for label tags*/
+label {
+  font-family: "M PLUS 1p", sans-serif;
+  font-size: 18px;
+}
+
+/*styling for input, select and textarea tags*/
+input,
+select,
+textarea {
+  font-family: "M PLUS 1p", sans-serif;
+  padding: 20px;
+  font-size: 16px;
+}
+
+.button {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+button {
+  padding: 30px 70px;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* the colour of the button changes when user hovers over it */
+button:hover {
+  background: black;
+  color: white;
+}
+
+/*styling for anchor tags*/
+a {
+  font-family: "M PLUS 1p", sans-serif;
+}

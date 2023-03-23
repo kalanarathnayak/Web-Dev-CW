@@ -1,0 +1,280 @@
+/*styling for the container containing the heading and, form element for background color change and font color change*/
+.headerContainer {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*styling for background color dropdown-list*/
+#colors {
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 20px;
+    background-color: whitesmoke;
+    border-color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+    font-size: 15px;
+    border-width: 0.7mm;
+    margin-right: 40px;
+}
+
+/*styling while selecting background color dropdown-list*/
+#colors:hover {
+    opacity: 0.6;
+    color: gray;
+    cursor: pointer;
+}
+
+/*styling for text color dropdown-list*/
+#font {
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 20px;
+    background-color: whitesmoke;
+    border-color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+    font-size: 15px;
+    border-width: 0.7mm;
+}
+
+/*styling while selecting text color dropdown-list*/
+#font:hover {
+    opacity: 0.6;
+    color: gray;
+    cursor: pointer;
+}
+
+/*styling for the polaroids which display the thumbnail images*/
+.polaroid {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 5px 8px 0 rgba(0, 0, 0, 0.19);
+    padding-top: 2%;
+    padding-left: 2%;
+    height: 425px;
+    width: 250px;
+    background-color: whitesmoke;
+    margin-right: 20px;
+}
+
+/*styling for the title of the painting which displays under thumbnail images*/
+.painting-title {
+    padding-right: 30px;
+    font-family: 'M PLUS 1p', sans-serif;
+    text-align: center;
+}
+
+/*In order to hide description so that it would not display under the thumbnail images*/
+.text1 {
+    display: none;
+}
+
+/*margin for reset button to add space between reset and click here buttons*/
+#button3 {
+    margin-right: 10px;
+}
+
+/*styling for both reset and click here to display buttons*/
+
+
+/*---viewing area to display larger image and description----*/
+div.polaroid3 {
+    padding-top: 50px;
+    height: 1250px;
+    width: 1200px;
+    background-color: whitesmoke;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 5px 8px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    margin-left: 120px;
+}
+
+/*larger image in the viewing area */
+#selected {
+    margin-right: auto;
+    margin-left: auto;
+    height: 950px;
+    width: 750px;
+}
+
+/*styling for the form which includes the name of radio buttons and the buttons*/
+.formBg {
+    background-color: whitesmoke;
+    clear: both;
+    position: relative;
+    top: 20px;
+    width: auto;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 60px;
+    padding: 20px 20px 20px 20px;
+    height: 45px;
+}
+
+.formBg label {
+    padding-bottom: 0px;
+}
+
+/*size of the div */
+/*styling for the container containing the heading and, form element for background color change and font color change*/
+.headerContainer {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*styling for background color dropdown-list*/
+#colors {
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 20px;
+    background-color: whitesmoke;
+    border-color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+    font-size: 15px;
+    border-width: 0.7mm;
+    margin-right: 40px;
+}
+
+/*styling while selecting background color dropdown-list*/
+#colors:hover {
+    opacity: 0.6;
+    color: gray;
+    cursor: pointer;
+}
+
+/*styling for text color dropdown-list*/
+#font {
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 20px;
+    background-color: whitesmoke;
+    border-color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+    font-size: 15px;
+    border-width: 0.7mm;
+}
+
+/*styling while selecting text color dropdown-list*/
+#font:hover {
+    opacity: 0.6;
+    color: gray;
+    cursor: pointer;
+}
+
+/*styling for the polaroids which display the thumbnail images*/
+.polaroid {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 5px 8px 0 rgba(0, 0, 0, 0.19);
+    padding-top: 2%;
+    padding-left: 2%;
+    height: 425px;
+    width: 250px;
+    background-color: whitesmoke;
+    margin-right: 20px;
+}
+
+/*styling for the title of the painting which displays under thumbnail images*/
+.painting-title {
+    padding-right: 30px;
+    font-family: 'M PLUS 1p', sans-serif;
+    text-align: center;
+}
+
+/*In order to hide description so that it would not display under the thumbnail images*/
+.text1 {
+    display: none;
+}
+
+/*margin for reset button to add space between reset and click here buttons*/
+#button3 {
+    margin-right: 10px;
+}
+
+#button2 {
+    margin-left: 10px;
+}
+
+/*styling for both reset and click here to display buttons*/
+.formbuttons {
+    float: right;
+    margin-left: 30px;
+}
+
+/*---viewing area to display larger image and description----*/
+div.polaroid3 {
+    padding-top: 50px;
+    height: 1250px;
+    width: 1200px;
+    background-color: whitesmoke;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 5px 8px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    margin-left: 75px;
+}
+
+/*larger image in the viewing area */
+#selected {
+    margin-right: auto;
+    margin-left: auto;
+    height: 950px;
+    width: 750px;
+}
+
+/*styling for the form which includes the name of radio buttons and the buttons*/
+.formBg {
+    background-color: whitesmoke;
+    clear: both;
+    position: relative;
+    top: 20px;
+    width: auto;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 60px;
+    padding: 20px 20px 20px 20px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/*size of the div */
+.divSize {
+    height: 300px;
+    width: 200px;
+}
+
+/*picture will take the maximum height and width of the div */
+.pictureSize {
+    height: 100%;
+    width: 100%;
+}
+
+/*styling for radio buttons*/
+input[type="radio"] {
+    margin: 0 10px 0 30px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+/*styling for container containing all the pictures, title and artist and description of the pictures*/
+.container1 {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*styling for container containing all the pictures, title and artist and description of the pictures*/
+.container3 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    padding: 0;
+}
+
+/*styling for back to top links*/
+#toTop {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
